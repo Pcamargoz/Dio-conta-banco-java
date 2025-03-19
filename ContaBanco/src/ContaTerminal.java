@@ -20,10 +20,29 @@ public class ContaTerminal {
         if(nome.equalsIgnoreCase("PEDRO") && agencia.equals("1234") && numero == 100){
 
             System.out.println("\nBem-vindo, Pedro! Sua conta foi criada com sucesso.");
-            System.out.println("Sua agência é " + agencia + ", conta " + numero + " e seu saldo R$100.00 já está disponível.");
+            System.out.println("Sua agência é " + agencia + ", conta " + numero + " e seu saldo R$1500.00 já esta disponivel !");
 
         } else{
             System.out.println("\nOs dados informados não correspondem aos esperados.");
+        }
+
+        // Quanto de saldo disponivel tem na conta;
+        double saldo = 1500;
+
+        // Perguntando quanto quer sacar
+        System.out.print("Quanto você quer sacar ?: ");
+        int valorSolicitado = scanner.nextInt();
+
+        // Se o valorsolicitado e menor ou igual do que o saldo;
+        if(valorSolicitado <= saldo){
+
+            saldo -= valorSolicitado;
+            System.out.println("Saque realizado com sucesso. Seu saldo ficou: R$" + saldo);
+            
+        // Caso não for;
+        }else{
+
+            System.out.println("Seu Saldo não esta disponivel !!");
         }
 
 
